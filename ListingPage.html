@@ -16,7 +16,7 @@
     <header>
 		<div id="title">reunite.me</div>
 		<nav>
-			<p><a href="InputPage.html">Submit an item</a></p>
+			<p><a onclick="togglePopup(createnewpost, wrapper);">Submit an item</a></p>
 		</nav>
 	</header>
 	
@@ -61,5 +61,9 @@
 </div>
 <script src="js/listingpage.js"></script>
 <script src="js/input.js"></script>
+<script>
+	var createnewpost = Document.getElementById("createnewpost");
+	var wrapper = Document.getElementById("wrapper");
+</script>
 </body>
 </html>
