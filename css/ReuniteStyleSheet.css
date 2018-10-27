@@ -36,7 +36,8 @@ nav a {
 	outline: 5px;
 	color: #FF851B;	/* steelblue; */
 	text-decoration: none;
-	padding: 10%;
+	padding: 3%;
+	border: 5px;
 	
 
 }
@@ -44,7 +45,7 @@ nav a:hover{
 	background-color: #FF851B;
 	display: inline-block;
 	color: #ffffff;
-	padding: 10%;
+	padding: 3;
 	
 
 }
