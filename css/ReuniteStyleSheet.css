@@ -36,6 +36,8 @@ nav a {
 	outline: none;
 	color: #FF851B;	/* steelblue; */
 	text-decoration: none;
+	border: #FF851B, 5px;
+	
 }
 
 main {
