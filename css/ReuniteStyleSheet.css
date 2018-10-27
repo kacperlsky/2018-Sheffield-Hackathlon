@@ -9,7 +9,10 @@ html {
 }
 #circle{
 	background-color: #FF851B;
-	border-radius: 100%;
+	height: 28px;
+  	width: 28px;
+ 	border-radius: 50%;
+	display: inline-block;
 }
 body {
 	height: 100%;
