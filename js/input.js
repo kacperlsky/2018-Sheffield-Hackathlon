@@ -14,7 +14,7 @@ firebase.initializeApp(config);
       var rootRef = firebase.database().ref().child('posts');
       $('#submit').click(function(){
           rootRef.push({
-                lof:$('input[name=lof]:checked').val();
+                lof:$('input[name=lof]:checked').val(),
                 email:$('#email').val(),
                 description:$('#description').val(),
                 location:$('#location').val(),
