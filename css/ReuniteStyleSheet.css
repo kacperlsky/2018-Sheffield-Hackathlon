@@ -33,11 +33,10 @@ nav {
 }
 
 nav a {
-	outline: 5px;
+	outline: 5px solid #FF851B;
 	color: #FF851B;	/* steelblue; */
 	text-decoration: none;
 	padding: 3%;
-	border: 5px;
 	
 
 }
