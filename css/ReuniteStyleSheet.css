@@ -7,7 +7,7 @@ html {
 body {
 	height: 100%;
 	margin: 0;
-	background-color: gray;
+	background-color:#FF851B;
 	font-family: "Noto Sans", "Segoe UI", "Myriad Pro", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
@@ -22,7 +22,7 @@ header {
 	display: inline-block;
     font-family: 'Comfortaa', cursive;
 	font-size: 4em;
-	color: steelblue;
+	color: #0074D9;
 }
 
 nav {
@@ -40,7 +40,7 @@ nav a {
 
 main {
 	padding: 1em;
-	background-color: lightgrey;
+	background-color: 	#DCDCDC	;
 }
 
 main:after {
