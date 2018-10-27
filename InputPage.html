@@ -5,9 +5,9 @@
     <title>Reunite.me</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/ReuniteStyleSheet.css">
-	
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="js/functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+	<!--<script src="js/functions.js"></script>-->
 </head>
 
 <body>
@@ -17,48 +17,29 @@
     </nav>
 
     <form>
-        <p>Lost or found?<br>
-            <input type="text" name="lostOrFound"></p>
-        <p>Email address:<br>
-            <input type="text" name="email"></p>
-        <p>Item description:<br>
-            <input type="text" name="description"></p>
-        <p>Location:<br>
-            <input type="text" name="location"></p>
-        <p>Date:<br>
-            <input type="text" name="date"></p><br>
-        <p><input type="submit" value="Submit"></p>
+        <p>Lost or found?</p><br>
+        <div id="lost">
+            <input type="radio" name="lof" value="lost">
+            <label>Lost</label>
+            </div>
+            <div id="found">
+            <input type="radio" name="lof" value="found">
+            <label>Found</label>
+            </div>
+        <p>Email address:</p><br>
+            <input type="email" name="email" id="email">
+        <p>Item description:</p><br>
+            <input type="text" name="description" id="description">
+        <p>Location:</p><br>
+            <input type="text" name="location" id="location">
+        <p>Date:</p><br>
+            <input type="date" name="date" id="date"><br>
+        <input type="submit" value="Submit" id="submit">
     </form>
     <footer>
         <p>For HackSheffield4</p>
     </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
-        <script>
-          // Initialize Firebase
-          var config = {
-        apiKey: "AIzaSyC56DeZIqnGDiUpOtvL9_lcToRaItd8014",
-        authDomain: "reuniteme-662eb.firebaseapp.com",
-        databaseURL: "https://reuniteme-662eb.firebaseio.com",
-        projectId: "reuniteme-662eb",
-        storageBucket: "reuniteme-662eb.appspot.com",
-        messagingSenderId: "289356166789"
-    };
-    firebase.initializeApp(config);
-
-         
-        
-          var rootRef = firebase.database().ref().child('posts');
-          $('#submit').click(function(){
-              rootRef.push({
-                    email:$('#email').val(),
-                    description:$('#description').val(),
-                    location:$('#location').val(),
-                    date:$('#date').val()
-                    
-              });
-          })
-        </script>
+       
+        <script src="js/input.js"></script>
 </body>
-<script src="js/firebase.js"></script>
 </html>

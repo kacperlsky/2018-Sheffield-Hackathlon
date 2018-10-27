@@ -13,7 +13,9 @@ var rootRef = firebase.database().ref().child('posts');
 
 rootRef.on("child_added", snap => {
 	var email = snap.child('email').val();
-
-	$("#posts").append("<p>" + email + "</p>");
-
+	var location = snap.child('location').val();
+	var description = snap.child('description').val();
+	var date = snap.child('date').val();
+	var lof = snap.child('lof').val();
+	$('#posts').append("<dl><dt id='"+ lof+ "'>" + lof + "<dt><dt>Location</dt><dd>"+ location+"</dd><dt>Date</dt><dd>"+date+"</dd><input type='email' id='founderorloser'><img src='img/send_icon.svg' alt='Sendyour email' height='24' width='24'></dl>");
 });

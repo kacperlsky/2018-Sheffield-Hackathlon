@@ -5,58 +5,17 @@
     <title>Reunite.me</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/ReuniteStyleSheet.css">
-	
+	<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="js/functions.js"></script>
-	
-<script>
-
-var DATA = [
-	// Test object, simulating database output
-
-	{	"Lost":		"Phone",
-		"Location":	"Unknown",
-		"Date":		"26/10/2018"
-	},
-	{	"Lost":		"UCard",
-		"Location":	"Unknown",
-		"Date":		"26/10/2018"
-	},
-	{	"Lost":		"UCard",
-		"Location":	"Unknown",
-		"Date":		"26/10/2018"
-	},
-	{	"Lost":		"UCard",
-		"Location":	"Unknown",
-		"Date":		"26/10/2018"
-	},
-	{	"Lost":		"UCard",
-		"Location":	"Unknown",
-		"Date":		"26/10/2018"
-	},
-	{	"Lost":		"UCard",
-		"Location":	"Unknown",
-		"Date":		"26/10/2018"
-	},
-	{	"Lost":		"UCard",
-		"Location":	"Unknown",
-		"Date":		"26/10/2018"
-	},
-	{	"Lost":		"UCard",
-		"Location":	"Unknown",
-		"Date":		"26/10/2018"
-	}
-]
-
-</script>
+	<!--<script src="js/functions.js"></script>-->
 
 </head>
-<body onload="displayPosts(DATA, document.getElementById('posts'));">
+<body>
 
     <header>
 		<div id="title">reunite.me</div>
 		<nav>
-			<a href="InputPage.html">Click here to submit a lost/found report</a>
+			<p><a href="InputPage.html">Submit an item</a></p>
 		</nav>
 	</header>
 	
@@ -68,9 +27,8 @@ var DATA = [
 	</main>
 
     <footer>
-        <p>For HackSheffield4</p>
+        <p>For HackSheffield4 ⓒ Reunite.me 2018</p>
     </footer>
-
+	<script src="js/listingpage.js"></script>
 </body>
-<script src="js/firebase.js"></script>
 </html>
