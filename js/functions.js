@@ -52,17 +52,17 @@ function displayPosts(arrFromDatabase, containerElement) {
 		
 		var post = document.createElement("dl");
 		var objPost = arrFromDatabase[i];
-		$.each(objPost, function(key, value)) {
+		$.each(objPost, function(key, value) {
 			
-			var fieldName = post.appendChild("dt");
+			var fieldName = document.createElement("dt");
 			fieldName.innerText = key;
 			
-			var fieldValue = post.appendChild("dd");
+			var fieldValue = document.createElement("dd");
 			fieldValue.innerText = value;
 			
 			post.appendChild(fieldName);
 			post.appendChild(fieldValue);
-		}
+		});
 		containerElement.appendChild(post);
 	}
 }

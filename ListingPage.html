@@ -5,8 +5,54 @@
     <title>Reunite.me</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/ReuniteStyleSheet.css">
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/functions.js"></script>
+	
+<script>
+
+var DATA = [
+	// Test object, simulating database output
+
+	{	"Lost":		"Phone",
+		"Location":	"Unknown",
+		"Date":		"26/10/2018"
+	},
+	{	"Lost":		"UCard",
+		"Location":	"Unknown",
+		"Date":		"26/10/2018"
+	},
+	{	"Lost":		"UCard",
+		"Location":	"Unknown",
+		"Date":		"26/10/2018"
+	},
+	{	"Lost":		"UCard",
+		"Location":	"Unknown",
+		"Date":		"26/10/2018"
+	},
+	{	"Lost":		"UCard",
+		"Location":	"Unknown",
+		"Date":		"26/10/2018"
+	},
+	{	"Lost":		"UCard",
+		"Location":	"Unknown",
+		"Date":		"26/10/2018"
+	},
+	{	"Lost":		"UCard",
+		"Location":	"Unknown",
+		"Date":		"26/10/2018"
+	},
+	{	"Lost":		"UCard",
+		"Location":	"Unknown",
+		"Date":		"26/10/2018"
+	}
+]
+
+</script>	
+	
+	
 </head>
-<body>
+<body onload="displayPosts(DATA, document.getElementById('posts'));">
     <h1>Listings</h1>
     <nav>
         <a href="InputPage.html">Click here to submit a lost/found report</a>
@@ -14,43 +60,42 @@
 
 	<div id="posts">
 	
-		<!-- Example posts -->
-		<div id="listings">
-			<dl id="listElement">
-			<dt>Found: Keys</dt>
-			<dd>Location: SU</dd>
-			<dd>Date: 27/10/18</dd>
-			</dl>
-			<dl id="listElement">
-			<dt>Lost: UCard</dt>
-			<dd>Location: Unknown</dd>
-			<dd>Date: 26/10/18</dd>
-			</dl><dl id="listElement">
-			<dt>Lost: UCard</dt>
-			<dd>Location: Unknown</dd>
-			<dd>Date: 26/10/18</dd>
-			</dl><dl id="listElement">
-			<dt>Lost: UCard</dt>
-			<dd>Location: Unknown</dd>
-			<dd>Date: 26/10/18</dd>
-			</dl><dl id="listElement">
-			<dt>Lost: UCard</dt>
-			<dd>Location: Unknown</dd>
-			<dd>Date: 26/10/18</dd>
-			</dl><dl id="listElement">
-			<dt>Lost: UCard</dt>
-			<dd>Location: Unknown</dd>
-			<dd>Date: 26/10/18</dd>
-			</dl><dl id="listElement">
-			<dt>Lost: UCard</dt>
-			<dd>Location: Unknown</dd>
-			<dd>Date: 26/10/18</dd>
-			</dl><dl id="listElement">
-			<dt>Lost: UCard</dt>
-			<dd>Location: Unknown</dd>
-			<dd>Date: 26/10/18</dd>
-			</dl>
-		</div>
+	<!-- Example posts
+		<dl id="listElement">
+		<dt>Found: Keys</dt>
+		<dd>Location: SU</dd>
+		<dd>Date: 27/10/18</dd>
+		</dl>
+		<dl id="listElement">
+		<dt>Lost: UCard</dt>
+		<dd>Location: Unknown</dd>
+		<dd>Date: 26/10/18</dd>
+		</dl><dl id="listElement">
+		<dt>Lost: UCard</dt>
+		<dd>Location: Unknown</dd>
+		<dd>Date: 26/10/18</dd>
+		</dl><dl id="listElement">
+		<dt>Lost: UCard</dt>
+		<dd>Location: Unknown</dd>
+		<dd>Date: 26/10/18</dd>
+		</dl><dl id="listElement">
+		<dt>Lost: UCard</dt>
+		<dd>Location: Unknown</dd>
+		<dd>Date: 26/10/18</dd>
+		</dl><dl id="listElement">
+		<dt>Lost: UCard</dt>
+		<dd>Location: Unknown</dd>
+		<dd>Date: 26/10/18</dd>
+		</dl><dl id="listElement">
+		<dt>Lost: UCard</dt>
+		<dd>Location: Unknown</dd>
+		<dd>Date: 26/10/18</dd>
+		</dl><dl id="listElement">
+		<dt>Lost: UCard</dt>
+		<dd>Location: Unknown</dd>
+		<dd>Date: 26/10/18</dd>
+		</dl>
+	-->
 
 	</div>
 
