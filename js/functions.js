@@ -1,7 +1,7 @@
 /*** Form data handling ***/
 
 function parseDate(str, outputAsArray) {
-	// Output: array in the format [year, month, day] (default) or string in the format "YYYY-MM-DD"
+	// Output: string in the format "YYYY-MM-DD" (default) or array in the format [year, month, day]
 	
 	// Split string into an array of numbers
 	var arr = str.match(/\d+/g);
@@ -50,18 +50,14 @@ function displayPosts(arrFromDatabase, containerElement) {
 	var arrLength = arrFromDatabase.length;
 	for (var i = 0; i < arrLength; i++) {
 		
-		var post = document.createElement("dl");
+		var post = document.createElement("article");
 		var objPost = arrFromDatabase[i];
 		$.each(objPost, function(key, value) {
 			
-			var fieldName = document.createElement("dt");
-			fieldName.innerText = key;
-			
-			var fieldValue = document.createElement("dd");
-			fieldValue.innerText = value;
-			
-			post.appendChild(fieldName);
-			post.appendChild(fieldValue);
+			var field = document.createElement("div");
+			field.setAttribute("name", key);
+			field.innerText = value;
+			post.appendChild(field);
 		});
 		containerElement.appendChild(post);
 	}

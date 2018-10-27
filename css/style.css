@@ -27,9 +27,10 @@ header {
 
 nav {
 	display: inline-block;
-	float: right;
 	padding: 1em;
 	background-color: white;
+	text-align: right;
+	float: right;
 }
 
 nav a {
