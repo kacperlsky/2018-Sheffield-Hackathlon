@@ -17,8 +17,15 @@
     </nav>
 
     <form>
-        <p>Lost or found?<br>
-            <input type="text" name="lostOrFound"></p>
+        <p>Lost or found?</p><br>
+        <div id="lost">
+            <input type="radio" name="lof" value="lost">
+            <label>Lost</label>
+            </div>
+            <div id="found">
+            <input type="radio" name="lof" value="found">
+            <label>Found</label>
+            </div>
         <p>Email address:<br>
             <input type="text" name="email"></p>
         <p>Item description:<br>
@@ -35,5 +42,4 @@
        
         <script src="js/input.js"></script>
 </body>
-<script src="js/firebase.js"></script>
 </html>
