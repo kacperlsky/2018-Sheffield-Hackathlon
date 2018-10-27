@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	background-color: gray;
+	font-family: "Noto Sans", "Segoe UI", "Myriad Pro", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+header {
+	position: sticky;
+	padding: 1em;
+	background-color: white;
+	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+#title {
+	display: inline-block;
+    font-family: 'Comfortaa', cursive;
+	font-size: 4em;
+	color: steelblue;
+}
+
+nav {
+	display: inline-block;
+	float: right;
+	padding: 1em;
+	background-color: white;
+}
+
+nav a {
+	outline: none;
+	color: firebrick;	/* steelblue; */
+	text-decoration: none;
+}
+
+main {
+	padding: 1em;
+	background-color: lightgray;
+}
+
+main:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+dl {
+	display: inline-block;
+	position: relative;
+	float: left;
+	margin: 1em;
+	padding: 1em;
+	background-color: white;
+	border: 1px solid gray;
+	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+dt {
+	
+}
+
+dd {
+	
+}
+
+footer {
+	padding: 1em;
+	background-color: white;
+	color: steelblue;
+	text-align: center;
+	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
+}
