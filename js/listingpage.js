@@ -16,5 +16,6 @@ rootRef.on("child_added", snap => {
 	var location = snap.child('location').val();
 	var description = snap.child('description').val();
 	var date = snap.child('date').val();
-	$('#posts2').append("<dl><dt>Email<dt><dd>" + email + "</dd><dt>Location</dt><dd>"+ location+"</dd><dt>Date</dt><dd>"+date+"</dd></dl>");
+	var lof = snap.child('lof').val();
+	$('#posts').append("<dl><dt id='"+ lof+ "'>" + lof + "<dt><dt>Location</dt><dd>"+ location+"</dd><dt>Date</dt><dd>"+date+"</dd></dl>");
 });
