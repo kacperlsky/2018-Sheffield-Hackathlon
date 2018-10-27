@@ -5,8 +5,8 @@
     <title>Reunite.me</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/ReuniteStyleSheet.css">
-	
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
 	<script src="js/functions.js"></script>
 </head>
 
@@ -32,33 +32,8 @@
     <footer>
         <p>For HackSheffield4</p>
     </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
-        <script>
-          // Initialize Firebase
-          var config = {
-        apiKey: "AIzaSyC56DeZIqnGDiUpOtvL9_lcToRaItd8014",
-        authDomain: "reuniteme-662eb.firebaseapp.com",
-        databaseURL: "https://reuniteme-662eb.firebaseio.com",
-        projectId: "reuniteme-662eb",
-        storageBucket: "reuniteme-662eb.appspot.com",
-        messagingSenderId: "289356166789"
-    };
-    firebase.initializeApp(config);
-
-         
-        
-          var rootRef = firebase.database().ref().child('posts');
-          $('#submit').click(function(){
-              rootRef.push({
-                    email:$('#email').val(),
-                    description:$('#description').val(),
-                    location:$('#location').val(),
-                    date:$('#date').val()
-                    
-              });
-          })
-        </script>
+       
+        <script src="js/input.js"></script>
 </body>
 <script src="js/firebase.js"></script>
 </html>
