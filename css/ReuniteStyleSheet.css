@@ -32,22 +32,12 @@ nav {
 	background-color: white;
 }
 
-nav a {
-	outline: 5px solid #FF851B;
-	color: #FF851B;	/* steelblue; */
-	text-decoration: none;
-	padding: 3%;
-	border-radius: 5%;
-	
-
-}
-nav a:hover{
+nav a{
 	background-color: #FF851B;
-	display: inline-block;
 	color: #ffffff;
 	padding: 3%;
 	border-radius: 5%;
-	
+	outline: none;
 
 }
 
