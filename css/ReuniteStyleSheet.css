@@ -4,6 +4,13 @@ html {
 	height: 100%;
 }
 
+.button{
+	color: #FF851B;
+}
+#circle{
+	background-color: #FF851B;
+	border-radius: 100%;
+}
 body {
 	height: 100%;
 	margin: 0;
