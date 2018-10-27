@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+@import url("https://fonts.googleapis.com/css?family=Comfortaa");
 
 html {
 	height: 100%;
@@ -20,7 +20,7 @@ header {
 
 #title {
 	display: inline-block;
-    font-family: 'Comfortaa', cursive;
+    font-family: "Comfortaa", cursive;
 	font-size: 4em;
 	color: steelblue;
 }
@@ -50,8 +50,7 @@ main:after {
 	clear: both;
 }
 
-dl {
-	display: inline-block;
+#posts table {
 	position: relative;
 	float: left;
 	margin: 1em;
@@ -61,12 +60,10 @@ dl {
 	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
-dt {
-	
-}
-
-dd {
-	
+#posts th {
+	padding-right: 1em;
+	text-align: left;
+	font-weight: bold;
 }
 
 footer {
@@ -77,16 +74,18 @@ footer {
 	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
-.popup {
-	display: none;
-	position: absolute;
-	top: 25%;
-	left: 25%;
-	width: 50%;
-	height: 50%;
-	background-color: white;
+#wrapper {
+	transition: filter 0.2s linear;
 }
 
-.blur {
-	filter: blur(1rem);
+#popup, .popup {
+	opacity: 0;
+	z-index: 1;
+	position: absolute;
+	top: 15%;
+	left: 15%;
+	width: 70%;
+	height: 70%;
+	background-color: white;
+	box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
 }

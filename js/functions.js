@@ -1,3 +1,49 @@
+// Useful functions for reunite.me
+
+
+/*** HTML output ***/
+
+function displayPosts(arrFromDatabase, containerElement) {
+	
+	var arrLength = arrFromDatabase.length;
+	for (var i = 0; i < arrLength; i++) {
+		
+		var post = document.createElement("table");
+		var objPost = arrFromDatabase[i];
+		$.each(objPost, function(key, value) {
+			
+			var field = document.createElement("tr");
+			var fieldName = document.createElement("th");
+			var fieldValue = document.createElement("td");
+			
+			fieldName.innerText = key;
+			fieldValue.innerText = value;
+			
+			field.appendChild(fieldName);
+			field.appendChild(fieldValue);
+			post.appendChild(field);
+		});
+		containerElement.appendChild(post);
+	}
+}
+
+function togglePopup(popupElement, blurElement) {
+	
+	var popupVisible = (parseInt(popupElement.style.opacity)) ? true : false;
+	
+	if (blurElement) {
+		if (popupVisible) {
+			var blurFilter = /\s*blur\s*\(.*?\)/gi;
+			blurElement.style.filter = blurElement.style.filter.replace(blurFilter, "");
+		}
+		else {
+			blurElement.style.filter += " blur(1rem)";					
+		}
+	}
+	popupElement.style.opacity = popupVisible ? "0" : "1";
+}
+
+
 /*** Form data handling ***/
 
 function parseDate(str, outputAsArray) {
@@ -40,25 +86,4 @@ function isEmailAddress(str) { // Output: boolean
 
 	// Trim string, test for email format x@x.xx
 	return str.replace(/^\s+|\s+$/g, "").test(/[\w\.]+@[\w\.]+\.\w{2,}/);
-}
-
-
-/*** HTML output ***/
-
-function displayPosts(arrFromDatabase, containerElement) {
-	
-	var arrLength = arrFromDatabase.length;
-	for (var i = 0; i < arrLength; i++) {
-		
-		var post = document.createElement("article");
-		var objPost = arrFromDatabase[i];
-		$.each(objPost, function(key, value) {
-			
-			var field = document.createElement("div");
-			field.setAttribute("name", key);
-			field.innerText = value;
-			post.appendChild(field);
-		});
-		containerElement.appendChild(post);
-	}
 }
