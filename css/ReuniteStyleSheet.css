@@ -33,11 +33,15 @@ nav {
 }
 
 nav a {
-	outline: none;
-	color: #FF851B;	/* steelblue; */
+	outline: 5px;
+	color: #ffffff;	/* steelblue; */
 	text-decoration: none;
-	border: 5px, #FF851B;
+	background-color: #FF851B;
+	display: inline-block;
+}
+nav a:hover{
 	
+
 }
 
 main {
