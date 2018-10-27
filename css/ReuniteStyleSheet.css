@@ -34,12 +34,17 @@ nav {
 
 nav a {
 	outline: 5px;
-	color: #ffffff;	/* steelblue; */
+	color: #FF851B;	/* steelblue; */
 	text-decoration: none;
-	background-color: #FF851B;
-	display: inline-block;
+	padding: 10%;
+	
+
 }
 nav a:hover{
+	background-color: #FF851B;
+	display: inline-block;
+	color: #ffffff;
+	padding: 10%;
 	
 
 }
