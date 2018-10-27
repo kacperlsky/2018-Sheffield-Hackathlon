@@ -11,9 +11,11 @@ firebase.initializeApp(config);
 
 var rootRef = firebase.database().ref().child('posts');
 
+/*
 rootRef.on("child_added", snap => {
 	var email = snap.child('email').val();
 
 	$("#posts").append("<p>" + email + "</p>");
 
 });
+*/
