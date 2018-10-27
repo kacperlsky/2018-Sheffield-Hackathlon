@@ -1,0 +1,27 @@
+h1 {
+    font-family: "Times New Roman";
+    font-size: 2em;
+    margin: 0;
+    padding: 0 0 5px 5px;
+    text-align: center;
+}
+
+nav {
+    font-family: "Times New Roman";
+    font-size: 1em;
+    margin: 0;
+    padding: 0 0 15px 5px;
+    text-align: center;
+}
+
+form {
+    font-family: "Times New Roman";
+    font-size: 1em;
+    padding: 0 0 0 20px;
+
+}
+
+ul li{
+    list-style-type: none;
+    padding: 5px;
+}
