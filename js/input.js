@@ -13,7 +13,11 @@ var rootRef = firebase.database().ref().child('posts');
 
 rootRef.on("child_added", snap => {
 	var email = snap.child('email').val();
-
-	$("#posts").append("<p>" + email + "</p>");
-
+	var location = snap.child('location').val();
+	var description = snap.child('description').val();
+	var date = snap.child('date').val();
+	console.log(email);
+	console.log(location);
+	console.log(description);
+	console.log(date);
 });
