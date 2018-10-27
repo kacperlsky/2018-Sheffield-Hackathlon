@@ -40,7 +40,7 @@ nav a {
 
 main {
 	padding: 1em;
-	background-color: grey;
+	background-color: lightgrey;
 }
 
 main:after {
@@ -57,6 +57,7 @@ dl {
 	padding: 1em;
 	background-color: white;
 	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
+	border-radius: 5%;
 }
 
 dt {
