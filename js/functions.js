@@ -1,7 +1,53 @@
+// Useful functions for reunite.me
+
+
+/*** HTML output ***/
+
+function displayPosts(arrFromDatabase, containerElement) {
+	
+	var arrLength = arrFromDatabase.length;
+	for (var i = 0; i < arrLength; i++) {
+		
+		var post = document.createElement("table");
+		var objPost = arrFromDatabase[i];
+		$.each(objPost, function(key, value) {
+			
+			var field = document.createElement("tr");
+			var fieldName = document.createElement("th");
+			var fieldValue = document.createElement("td");
+			
+			fieldName.innerText = key;
+			fieldValue.innerText = value;
+			
+			field.appendChild(fieldName);
+			field.appendChild(fieldValue);
+			post.appendChild(field);
+		});
+		containerElement.appendChild(post);
+	}
+}
+
+function togglePopup(popupElement, blurElement) {
+	
+	var popupVisible = (parseInt(popupElement.style.opacity)) ? true : false;
+	
+	if (blurElement) {
+		if (popupVisible) {
+			var blurFilter = /\s*blur\s*\(.*?\)/gi;
+			blurElement.style.filter = blurElement.style.filter.replace(blurFilter, "");
+		}
+		else {
+			blurElement.style.filter += " blur(1rem)";					
+		}
+	}
+	popupElement.style.opacity = popupVisible ? "0" : "1";
+}
+
+
 /*** Form data handling ***/
 
 function parseDate(str, outputAsArray) {
-	// Output: array in the format [year, month, day] (default) or string in the format "YYYY-MM-DD"
+	// Output: string in the format "YYYY-MM-DD" (default) or array in the format [year, month, day]
 	
 	// Split string into an array of numbers
 	var arr = str.match(/\d+/g);
@@ -40,29 +86,4 @@ function isEmailAddress(str) { // Output: boolean
 
 	// Trim string, test for email format x@x.xx
 	return str.replace(/^\s+|\s+$/g, "").test(/[\w\.]+@[\w\.]+\.\w{2,}/);
-}
-
-
-/*** HTML output ***/
-
-function displayPosts(arrFromDatabase, containerElement) {
-	
-	var arrLength = arrFromDatabase.length;
-	for (var i = 0; i < arrLength; i++) {
-		
-		var post = document.createElement("dl");
-		var objPost = arrFromDatabase[i];
-		$.each(objPost, function(key, value) {
-			
-			var fieldName = document.createElement("dt");
-			fieldName.innerText = key;
-			
-			var fieldValue = document.createElement("dd");
-			fieldValue.innerText = value;
-			
-			post.appendChild(fieldName);
-			post.appendChild(fieldValue);
-		});
-		containerElement.appendChild(post);
-	}
 }
