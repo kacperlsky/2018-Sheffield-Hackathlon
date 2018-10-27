@@ -12,7 +12,7 @@ firebase.initializeApp(config);
      
     
       var rootRef = firebase.database().ref().child('posts');
-      $('#submit').click(function(){
+      $('#submit_createnewpost').click(function(){
           rootRef.push({
                 lof:$('input[name=lof]:checked').val(),
                 email:$('#email').val(),
