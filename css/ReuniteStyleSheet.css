@@ -9,8 +9,8 @@ html {
 }
 #circle{
 	background-color: #FF851B;
-	height: 28px;
-  	width: 28px;
+	height: 35px;
+  	width: 35px;
  	border-radius: 50%;
 	display: inline-block;
 }
