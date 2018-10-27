@@ -1,0 +1,15 @@
+#wrapper {
+	transition: filter 0.2s linear;
+}
+
+#popup, .popup {
+	opacity: 0;
+	z-index: 1;
+	position: absolute;
+	top: 15%;
+	left: 15%;
+	width: 70%;
+	height: 70%;
+	background-color: white;
+	box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+}
