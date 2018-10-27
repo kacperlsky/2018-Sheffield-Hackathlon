@@ -33,12 +33,16 @@ nav {
 }
 
 nav a{
+	
 	background-color: #FF851B;
-	color: #ffffff;
-	padding: 3%;
-	border-radius: 5%;
-	outline: none;
+  	color: white;
+  	padding: 1em 1.5em;
+  	text-decoration: none;
+  	text-transform: uppercase;
 
+}
+nav a:hover{
+	background-color: #555;
 }
 
 main {
