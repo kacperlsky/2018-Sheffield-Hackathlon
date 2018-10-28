@@ -27,20 +27,33 @@ function displayPosts(arrFromDatabase, containerElement) {
 	}
 }
 
+function showPopup(popupElement, blurElement) {
+	
+	popupElement.style.opacity = "1";
+	if (blurElement) {
+		blurElement.style.filter += " blur(1rem)";
+	}
+}
+
+function hidePopup(popupElement, blurElement) {
+	
+	popupElement.style.opacity = "0";
+	if (blurElement) {
+		var blurFilter = /\s*blur\s*\(.*?\)/gi;
+		blurElement.style.filter = blurElement.style.filter.replace(blurFilter, "");
+	}
+}
+
 function togglePopup(popupElement, blurElement) {
 	
 	var popupVisible = (parseInt(popupElement.style.opacity)) ? true : false;
 	
-	if (blurElement) {
-		if (popupVisible) {
-			var blurFilter = /\s*blur\s*\(.*?\)/gi;
-			blurElement.style.filter = blurElement.style.filter.replace(blurFilter, "");
-		}
-		else {
-			blurElement.style.filter += " blur(1rem)";					
-		}
+	if (popupVisible) {
+		showPopup(popupElement, blurElement);
 	}
-	popupElement.style.opacity = popupVisible ? "0" : "1";
+	else {
+		hidePopup(popupElement, blurElement);				
+	}
 }
 
 
