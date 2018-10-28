@@ -24,9 +24,12 @@ function listFilter(list) { // header is any element, list is an unordered list
 			}
 			return false;
 		})
-		.keyup( function () {
-			// fire the above change event after every letter
-			$(this).change();
+		.keyup( function (key) {
+
+			if(key==13) {
+				$(this).change();
+			}
+
 		});
 }
 
