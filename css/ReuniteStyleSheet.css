@@ -46,7 +46,7 @@ nav {
 
 nav form {
 	display: inline;
-  	padding: 1em 1.5em;
+  	padding: 1em 1.5em 1em 0;
 }
 
 nav input {
@@ -56,6 +56,7 @@ nav input {
 }
 
 nav a {
+	display: inline-block;
 	background-color: #FF851B;
   	color: white;
   	padding: 1em 1.5em;
