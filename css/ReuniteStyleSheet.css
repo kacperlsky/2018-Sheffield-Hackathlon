@@ -75,7 +75,7 @@ dl {
 	padding: 1em;
 	background-color: white;
 	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
-	border-radius: 5%;
+	border-radius: 1em;
 }
 
 dt {
