@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Reunite.me</title>
     <link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/ReuniteStyleSheet.css">
@@ -30,8 +31,36 @@
     </footer>
 	
 </div>
+
 <div class="popup" id="createnewpost">
 	<form>
+        <p>Lost or found?<br>
+		  <div id="lost">
+			<input type="radio" name="lof_post" value="lost">
+			<label>Lost</label>
+		  </div>
+		  <div id="found">
+			<input type="radio" name="lof_post" value="found">
+			<label>Found</label>
+		  </div>
+		</p>
+		<p>Email address:<br>
+			<input type="email" name="email" id="email_post">
+		</p>
+		<p>Item description:<br>
+			<input type="text" name="description" id="description_post">
+		</p>
+		<p>Location:<br>
+			<input type="text" name="location" id="location_post">
+		</p>
+		<p>Date:<br>
+			<input type="date" name="date" id="date_post">
+		</p>
+		<input type="submit" value="Submit" id="submit_createnewpost">
+    </form>
+</div>
+
+<div class="popup" id="replytopost">
         <p>Lost or found?</p><br>
         <div id="lost_post">
             <input type="radio" name="lof_post" value="lost">

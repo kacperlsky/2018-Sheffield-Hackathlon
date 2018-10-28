@@ -61,13 +61,13 @@ main {
 	background-color: 	#DCDCDC	;
 }
 
-main:after {
+header:after, main:after {
 	content: "";
 	display: table;
 	clear: both;
 }
 
-dl {
+#posts table {
 	display: inline-block;
 	position: relative;
 	float: left;
@@ -78,12 +78,8 @@ dl {
 	border-radius: 1em;
 }
 
-dt {
-	
-}
-
-dd {
-	
+#posts tr {
+	text-align: left;
 }
 
 footer {
