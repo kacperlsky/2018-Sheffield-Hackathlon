@@ -61,7 +61,7 @@ main {
 	background-color: 	#DCDCDC	;
 }
 
-main:after {
+header:after, main:after {
 	content: "";
 	display: table;
 	clear: both;
