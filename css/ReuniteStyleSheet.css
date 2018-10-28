@@ -44,7 +44,7 @@ nav {
 	background-color: white;
 }
 
-nav a{
+nav a {
 	background-color: #FF851B;
   	color: white;
   	padding: 1em 1.5em;
@@ -52,20 +52,24 @@ nav a{
   	text-transform: uppercase;
 
 }
-nav a:hover{
+nav a:hover {
 	background-color: #555;
 	cursor: pointer;
 }
 
 main {
 	padding: 1em;
-	background-color: 	#DCDCDC	;
+	background-color: #DCDCDC;
 }
 
-header:after, main:after {
+header:after, main:after, #posts:after {
 	content: "";
 	display: table;
 	clear: both;
+}
+
+#posts {
+	margin: 0 auto;
 }
 
 #posts article {
