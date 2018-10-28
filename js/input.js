@@ -25,8 +25,10 @@
                 },
                 
                 function complete(){
-
+                    var downloadURL = task.snapshot.downloadURL;
+                    console.log(downloadURL);
                     
+
                 }
             
             );
