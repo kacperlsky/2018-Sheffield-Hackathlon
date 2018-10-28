@@ -17,8 +17,8 @@ function listFilter(list) { // header is any element, list is an unordered list
 				console.log(list);
 				// this finds all links in a list that contain the input,
 				// and hide the ones not containing the input while showing the ones that do
-				$(list).find("article div.value:not(:Contains(" + filter + "))").parent().slideUp();
-				$(list).find("article div.value:Contains(" + filter + ")").parent().slideDown();
+				$(list).find("article .searchable:not(:Contains(" + filter + "))").parent().slideUp();
+				$(list).find("article .searchable:Contains(" + filter + ")").parent().slideDown();
 			} else {
 				$(list).find("article").slideDown();
 			}
