@@ -5,22 +5,22 @@ jQuery.expr[':'].Contains = function(a,i,m){
 };
 
 
-function listFilter(header, list) { // header is any element, list is an unordered list
+function listFilter(list) { // header is any element, list is an unordered list
 	// create and add the filter form to the header
-	var form = $("<form>").attr({"class":"filterform","action":"#"}),
-		input = $("<input>").attr({"class":"filterinput","type":"text"});
-	$(form).append(input).appendTo(header);
+	var form = $("#formSearch"),
+		input = $("#inputSearch");
 
 	$(input)
 		.change( function () {
 			var filter = $(this).val();
 			if(filter) {
+				console.log(list);
 				// this finds all links in a list that contain the input,
 				// and hide the ones not containing the input while showing the ones that do
-				$(list).find("a:not(:Contains(" + filter + "))").parent().slideUp();
-				$(list).find("a:Contains(" + filter + ")").parent().slideDown();
+				$(list).find("article div.value:not(:Contains(" + filter + "))").parent().slideUp();
+				$(list).find("article div.value:Contains(" + filter + ")").parent().slideDown();
 			} else {
-				$(list).find("li").slideDown();
+				$(list).find("article").slideDown();
 			}
 			return false;
 		})
@@ -32,6 +32,6 @@ function listFilter(header, list) { // header is any element, list is an unorder
 
 //ondomready
 $(function () {
-	listFilter($("#header"), $("#list"));
+	listFilter($("#posts"));
 });
 }(jQuery));
