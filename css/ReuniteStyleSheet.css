@@ -45,7 +45,6 @@ nav {
 }
 
 nav a{
-	
 	background-color: #FF851B;
   	color: white;
   	padding: 1em 1.5em;
@@ -82,6 +81,10 @@ header:after, main:after {
 
 #posts tr {
 	text-align: left;
+}
+
+#posts td {
+	float: left;
 }
 
 #posts .lost {
