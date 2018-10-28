@@ -103,10 +103,14 @@ function isEmailAddress(str) { // Output: boolean
 	return str.replace(/^\s+|\s+$/g, "").test(/[\w\.]+@[\w\.]+\.\w{2,}/);
 }
 
+function isEmpty(value) { // Output: boolean
+	return (value === "" || value === null || value === undefined);
+}
+
 function isCompletedForm(formElement) { // Output: boolean
 	
 	for (var name in formElement) {
-		if (formElement[name].value === "" || formElement[name].value === null) return false;
+		if (isEmpty(formElement[name].value)) return false;
 	}
 	return true;
 }
