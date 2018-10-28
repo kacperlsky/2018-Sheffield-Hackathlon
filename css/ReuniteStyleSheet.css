@@ -77,18 +77,16 @@ header:after, main:after, #posts:after {
 	position: relative;
 	float: left;
 	overflow-wrap: break-word;
-	width: 40vmin;
+	min-width: 40vmin;
 	margin: 2vmin;
-	padding: 1em;
+	padding: 0 1em;
 	background-color: white;
 	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
 	border-radius: 1em;
 }
 
-#posts img {
-	object-fit: contain;
-	max-height: 100%;
-	width: 100%;
+#posts .image {
+	max-height: 40vmin;
 }
 
 #posts .name {
@@ -96,7 +94,7 @@ header:after, main:after, #posts:after {
 }
 
 #posts .value {
-	
+	color: gray;
 }
 
 #posts .lost {
@@ -107,6 +105,11 @@ header:after, main:after, #posts:after {
 #posts .found {
 	font-weight: bold;
 	color: #0074D9;
+}
+
+#description_post {
+	min-width: 50%;
+	min-height: 50%;
 }
 
 footer {
