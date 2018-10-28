@@ -29,7 +29,7 @@ function displayPosts(arrFromDatabase, containerElement) {
 
 function showPopup(popupElement, blurElement) {
 	
-	popupElement.style["z-index"] = 1;
+	popupElement.style["z-index"] = "1";
 	popupElement.style["opacity"] = "1";
 	if (blurElement) {
 		blurElement.style.filter += " blur(1rem)";
@@ -38,7 +38,7 @@ function showPopup(popupElement, blurElement) {
 
 function hidePopup(popupElement, blurElement) {
 	
-	popupElement.style["z-index"] = -1;
+	popupElement.style["z-index"] = "-1";
 	popupElement.style["opacity"] = "0";
 	if (blurElement) {
 		var blurFilter = /\s*blur\s*\(.*?\)/gi;
