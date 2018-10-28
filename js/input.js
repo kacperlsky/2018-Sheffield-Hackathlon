@@ -25,8 +25,9 @@
                 },
                 
                 function complete(){
-
+                    storageRef = document.getElementById('url').innerHTML;
                     
+
                 }
             
             );
