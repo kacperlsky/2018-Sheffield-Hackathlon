@@ -41,6 +41,5 @@
                 description:$('#description_post').val(),
                 location:$('#location_post').val(),
                 date:$('#date_post').val()
-                url:downloadURL
           });
       })
