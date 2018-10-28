@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple list filter</title>
+    <link href="https://github.com/Kilian/sencss/raw/master/source/sen.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/testSearchStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script>
+        (function ($) {
+            // custom css expression for a case-insensitive contains()
+            jQuery.expr[':'].Contains = function(a,i,m){
+                return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase())>=0;
+            };
+            function listFilter(header, list) { // header is any element, list is an unordered list
+                // create and add the filter form to the header
+                var form = $("<form>").attr({"class":"filterform","action":"#"}),
+                    input = $("<input>").attr({"class":"filterinput","type":"text"});
+                $(form).append(input).appendTo(header);
+                $(input)
+                    .change( function () {
+                        var filter = $(this).val();
+                        if(filter) {
+                            // this finds all links in a list that contain the input,
+                            // and hide the ones not containing the input while showing the ones that do
+                            $(list).find("a:not(:Contains(" + filter + "))").parent().slideUp();
+                            $(list).find("a:Contains(" + filter + ")").parent().slideDown();
+                        } else {
+                            $(list).find("li").slideDown();
+                        }
+                        return false;
+                    })
+                    .keyup( function () {
+                        // fire the above change event after every letter
+                        $(this).change();
+                    });
+            }
+            //ondomready
+            $(function () {
+                listFilter($("#header"), $("#list"));
+            });
+        }(jQuery));
+    </script>
+</head>
+
+<body data-gr-c-s-loaded="true">
+<div id="wrap">
+    <h1 id="header">List to Search Through</h1>
+    <ul id="list">
+        <li style="display: list-item;"><a href="#/australia/">Australia</a></li>
+        <li style="display: list-item;"><a href="#/austria/">Austria</a></li>
+        <li style="display: list-item;"><a href="#/belgium/">Belgium</a></li>
+        <li style="display: list-item;"><a href="#/brazil/">Brazil</a></li>
+        <li style="display: list-item;"><a href="#/canada/">Canada</a></li>
+        <li style="display: list-item;"><a href="#/denmark/">Denmark</a></li>
+        <li style="display: list-item;"><a href="#/finland/">Finland</a></li>
+        <li style="display: list-item;"><a href="#/france/">France</a></li>
+        <li style="display: list-item;"><a href="#/germany/">Germany</a></li>
+        <li style="display: list-item;"><a href="#/greece/">Greece</a></li>
+        <li style="display: list-item;"><a href="#/ireland/">Ireland</a></li>
+        <li style="display: list-item;"><a href="#/israel/">Israel</a></li>
+        <li style="display: list-item;"><a href="#/italy/">Italy</a></li>
+        <li style="display: list-item;"><a href="#/japan/">Japan</a></li>
+        <li style="display: list-item;"><a href="#/luxembourg/">Luxembourg</a></li>
+        <li style="display: list-item;"><a href="#/mexico/">Mexico</a></li>
+        <li style="display: list-item;"><a href="#/netherlands/">Netherlands</a></li>
+        <li style="display: list-item;"><a href="#/norway/">Norway</a></li>
+        <li style="display: list-item;"><a href="#/poland/">Poland</a></li>
+        <li style="display: list-item;"><a href="#/portugal/">Portugal</a></li>
+        <li style="display: list-item;"><a href="#/russia/">Russia</a></li>
+        <li style="display: list-item;"><a href="#/spain/">Spain</a></li>
+        <li style="display: list-item;"><a href="#/sweden/">Sweden</a></li>
+        <li style="display: list-item;"><a href="#/switzerland/">Switzerland</a></li>
+        <li style="display: list-item;"><a href="#/turkey/">Turkey</a></li>
+        <li style="display: list-item;"><a href="#/united-kingdom/">United Kingdom</a></li>
+        <li style="display: list-item;"><a href="#/united-states/">United States</a></li>
+    </ul>
+</div>
+</body>
