@@ -60,6 +60,27 @@
 </div>
 
 <div class="popup" id="replytopost">
+        <p>Lost or found?</p><br>
+        <div id="lost_post">
+            <input type="radio" name="lof_post" value="lost">
+            <label>Lost</label>
+            </div>
+            <div id="found">
+            <input type="radio" name="lof_post" value="found">
+            <label>Found</label>
+            </div>
+        	<p>Email address:</p><br>
+            <input type="email" name="email" id="email_post">
+       		<p>Item description:</p><br>
+            <input type="text" name="description" id="description_post">
+        	<p>Location:</p><br>
+            <input type="text" name="location" id="location_post">
+        	<p>Date:</p><br>
+            <input type="date" name="date" id="date_post"><br>
+        <input type="button" value="Submit" id="submit_createnewpost">
+    </form>
+</div>
+<div class="pop1up" id="replytopost">
 
 </div>
 
@@ -69,8 +90,8 @@
 	var createnewpost = document.getElementById("createnewpost");
 	var wrapper = document.getElementById("wrapper");
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/functions.js"></script>
 <script src="js/listingpage.js"></script>
 <script src="js/input.js"></script>
