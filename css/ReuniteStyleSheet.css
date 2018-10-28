@@ -44,6 +44,17 @@ nav {
 	background-color: white;
 }
 
+nav form {
+	display: inline;
+  	padding: 1em 1.5em;
+}
+
+nav input {
+	border: 1px solid silver;
+	font-size: 1.5em;
+	width: 50vmin;
+}
+
 nav a {
 	background-color: #FF851B;
   	color: white;

@@ -32,7 +32,8 @@ function showPopup(popupElement, blurElement) {
 	popupElement.style["z-index"] = "1";
 	popupElement.style["opacity"] = "1";
 	if (blurElement) {
-		blurElement.style.filter += " blur(1rem)";
+		blurElement.style['-webkit-filter'] += " blur(1rem) brightness(0.5)";
+		blurElement.style['filter'] = blurElement.style['-webkit-filter'];
 	}
 }
 
@@ -41,8 +42,9 @@ function hidePopup(popupElement, blurElement) {
 	popupElement.style["z-index"] = "-1";
 	popupElement.style["opacity"] = "0";
 	if (blurElement) {
-		var blurFilter = /\s*blur\s*\(.*?\)/gi;
-		blurElement.style.filter = blurElement.style.filter.replace(blurFilter, "");
+		var blurFilter = /\s*(blur|brightness)\s*\(.*?\)/gi;
+		blurElement.style['-webkit-filter'] = blurElement.style['-webkit-filter'].replace(blurFilter, "");
+		blurElement.style['filter'] = blurElement.style['-webkit-filter'];
 	}
 }
 
