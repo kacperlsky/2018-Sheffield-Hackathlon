@@ -100,7 +100,7 @@ function parseDate(str, outputAsArray) {
 function isEmailAddress(str) { // Output: boolean
 
 	// Trim string, test for email format x@x.xx
-	return str.replace(/^\s+|\s+$/g, "").test(/[\w\.]+@[\w\.]+\.\w{2,}/);
+	return /[\w\.]+@[\w\.]+\.\w{2,}/.test(str.replace(/^\s+|\s+$/g, ""));
 }
 
 function isEmpty(value) { // Output: boolean
