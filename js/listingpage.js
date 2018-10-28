@@ -8,5 +8,5 @@ rootRef.on("child_added", snap => {
 	var description = snap.child('description').val();
 	var date = snap.child('date').val();
 	var lof = snap.child('lof').val();
-	$('#posts').append("<table><tr><th class='"+ lof+ "'>" + lof + "</th></tr><tr><th>Description</th><td>"+ description +"</td></tr><tr><th>Location</th><td>"+ location+"</td></tr><tr><th>Date</th><td>"+date+"</td></tr><tr><td colspan='2'><img src='img/send_icon_orange.svg' alt='Send your email' height='24' width='24'></td></tr></table>");
+	$('#posts').append("<article><p class='"+ lof+ "'>" + lof + "</p><p><div class='name'>Description</div><div class='value'>"+ description +"</div></p><p><div class='name'>Location</div><div class='value'>"+ location+"</div></p><p><div class='name'>Date</div><div class='value'>"+date+"</div></p><p><img src='img/send_icon_orange.svg' alt='Send your email' height='24' width='24'></p></article>");
 });
