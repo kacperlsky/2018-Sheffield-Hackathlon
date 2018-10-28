@@ -25,7 +25,8 @@
                 },
                 
                 function complete(){
-                    storageRef = document.getElementById('url').innerHTML;
+                    var downloadURL = task.snapshot.downloadURL;
+                    console.log(downloadURL);
                     
 
                 }
