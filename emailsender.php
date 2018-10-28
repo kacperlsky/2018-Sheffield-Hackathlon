@@ -1,7 +1,4 @@
 <?php
-	}
-	else
-	{
 		ini_set('SMTP',$_POST['Host']);
 		$to = $_POST['kacperlodzinski99@gmail.com'];
 		$from = 'From: ' . $_POST['moreni123@gmail.com'];
@@ -16,5 +13,4 @@
 		{
 			 echo "Message Not Sent";
 		}
-	}
 ?>
