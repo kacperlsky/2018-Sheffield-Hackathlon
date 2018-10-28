@@ -29,7 +29,8 @@ function displayPosts(arrFromDatabase, containerElement) {
 
 function showPopup(popupElement, blurElement) {
 	
-	popupElement.style.opacity = "1";
+	popupElement.style["z-index"] = 1;
+	popupElement.style["opacity"] = "1";
 	if (blurElement) {
 		blurElement.style.filter += " blur(1rem)";
 	}
@@ -37,7 +38,8 @@ function showPopup(popupElement, blurElement) {
 
 function hidePopup(popupElement, blurElement) {
 	
-	popupElement.style.opacity = "0";
+	popupElement.style["z-index"] = -1;
+	popupElement.style["opacity"] = "0";
 	if (blurElement) {
 		var blurFilter = /\s*blur\s*\(.*?\)/gi;
 		blurElement.style.filter = blurElement.style.filter.replace(blurFilter, "");
@@ -49,10 +51,10 @@ function togglePopup(popupElement, blurElement) {
 	var popupVisible = (parseInt(popupElement.style.opacity)) ? true : false;
 	
 	if (popupVisible) {
-		showPopup(popupElement, blurElement);
+		hidePopup(popupElement, blurElement);
 	}
 	else {
-		hidePopup(popupElement, blurElement);				
+		showPopup(popupElement, blurElement);				
 	}
 }
 
