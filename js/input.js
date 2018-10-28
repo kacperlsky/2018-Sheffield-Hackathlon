@@ -1,6 +1,7 @@
 
      var uploader = document.getElementById('uploader');
      var fileButton = document.getElementById('fileButton');
+     var downloadURL;
 
      fileButton.addEventListener('change', function(e) {
             //Get file
@@ -25,7 +26,7 @@
                 },
                 
                 function complete(){
-                    var downloadURL = task.snapshot.downloadURL;
+                    downloadURL = task.snapshot.downloadURL;
                    
                     
 
@@ -41,6 +42,5 @@
                 description:$('#description_post').val(),
                 location:$('#location_post').val(),
                 date:$('#date_post').val(),
-            
           });
       })
