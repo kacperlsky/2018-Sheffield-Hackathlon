@@ -67,7 +67,7 @@ main:after {
 	clear: both;
 }
 
-dl {
+#posts table {
 	display: inline-block;
 	position: relative;
 	float: left;
@@ -78,12 +78,8 @@ dl {
 	border-radius: 1em;
 }
 
-dt {
-	
-}
-
-dd {
-	
+#posts tr {
+	text-align: left;
 }
 
 footer {
