@@ -102,3 +102,11 @@ function isEmailAddress(str) { // Output: boolean
 	// Trim string, test for email format x@x.xx
 	return str.replace(/^\s+|\s+$/g, "").test(/[\w\.]+@[\w\.]+\.\w{2,}/);
 }
+
+function isCompletedForm(formElement) { // Output: boolean
+	
+	for (var name in formElement) {
+		if (formElement[name].value === "" || formElement[name].value === null) return false;
+	}
+	return true;
+}
