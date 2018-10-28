@@ -3,7 +3,7 @@
 
 /*** HTML output ***/
 
-function displayPosts(arrFromDatabase, containerElement) {
+/*function displayPosts(arrFromDatabase, containerElement) {
 	
 	var arrLength = arrFromDatabase.length;
 	for (var i = 0; i < arrLength; i++) {
@@ -25,7 +25,7 @@ function displayPosts(arrFromDatabase, containerElement) {
 		});
 		containerElement.appendChild(post);
 	}
-}
+} */
 
 function showPopup(popupElement, blurElement) {
 	
@@ -60,7 +60,7 @@ function togglePopup(popupElement, blurElement) {
 
 
 /*** Form data handling ***/
-
+/*
 function parseDate(str, outputAsArray) {
 	// Output: string in the format "YYYY-MM-DD" (default) or array in the format [year, month, day]
 	
@@ -113,4 +113,4 @@ function isCompletedForm(formElement) { // Output: boolean
 		if (isEmpty(formElement[name].value)) return false;
 	}
 	return true;
-}
+} */
